@@ -5,13 +5,21 @@ const express = require('express');
 	  PORT = process.env.PORT || 3000,
     bookRouter = express.Router(),
     mongoose = require('mongoose'),
-    config = require('./config/database');
+    config = require('./config/database'),
+    bodyParser = require('body-parser');
 
+app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.json());
 const db = mongoose.connect(config.url);
 const Book = require('./models/bookModel');
 
 //getting list of books
 bookRouter.route('/Books')
+          .post( (req, res) => {
+            let book = new Book(req.body);
+                book.save();
+                res.status(201).send(book);
+          })
           .get((req, res) => {             
               var query = {};
               if(req.query.genre){
