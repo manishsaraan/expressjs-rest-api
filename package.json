@@ -1,0 +1,23 @@
+{
+  "name": "expressjs-rest-api",
+  "version": "1.0.0",
+  "description": "Rest Api Build with NodeJs and Express",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "xo",
+    "lint": "node_modules/.bin/xo --fix",
+    "start": "node index.js"
+  },
+  "author": "“manishsaraan” <“manish021js@gmail.com”>",
+  "license": "MIT",
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-nodemon": "^2.2.1",
+    "xo": "^0.18.2"
+  }
+}
