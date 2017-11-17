@@ -1,7 +1,8 @@
-const mongoose = require('mongoose'),
-	Schema = mongoose.Schema;
+const mongoose = require('mongoose');
 
-ObjectId = Schema.ObjectId;
+const Schema = mongoose.Schema;
+
+const ObjectId = Schema.ObjectId;
 
 const bookModel = new Schema({
 	id: ObjectId,

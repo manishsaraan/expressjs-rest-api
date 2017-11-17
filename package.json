@@ -6,9 +6,8 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "test": "xo",
-    "lint": "node_modules/.bin/xo --fix",
+  "scripts": {    
+    "test": "node_modules/.bin/xo --fix",
     "start": "node index.js"
   },
   "author": "“manishsaraan” <“manish021js@gmail.com”>",
