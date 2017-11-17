@@ -10,12 +10,14 @@ const express = require('express');
 const db = mongoose.connect(config.url);
 const Book = require('./models/bookModel');
 
+//getting list of books
 bookRouter.route('/Books')
-          .get((req, res) => {
+          .get((req, res) => {             
               var query = {};
               if(req.query.genre){
                 query.genre = req.query.genre;
               }
+
             	Book.find(query, (err, books) => {
             		if (err) {
             	  		res.status(500).send(err);
@@ -24,6 +26,19 @@ bookRouter.route('/Books')
             		}
             	});
 });
+
+//getting book by id from db             
+bookRouter.route('/Books/:bookId')
+          .get( (req, res) => {
+
+            Book.findById(req.params.bookId, (err, book) => {
+                if (err) {
+                    res.status(500).send(err);
+                } else {
+                  res.json(book);
+                }
+              });
+          });          
 app.use('/api', bookRouter);
 app.get('/', (req, res) => {
 	res.send('Welcome Here!!');
