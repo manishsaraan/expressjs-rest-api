@@ -7,7 +7,7 @@ const log = console.log;
 const PORT = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const config = require('./config/database');
+const config = require('./config/database'); // eslint-disable-line import/no-unresolved
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
