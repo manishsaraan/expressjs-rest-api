@@ -23,3 +23,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
 	log(chalk.green('App is running at PORT : ' + PORT));
 });
+module.exports = app;

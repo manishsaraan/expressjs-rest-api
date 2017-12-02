@@ -6,7 +6,7 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {    
+  "scripts": {
     "test": "node_modules/.bin/xo --fix",
     "start": "node index.js"
   },
@@ -17,8 +17,13 @@
     "chalk": "^2.3.0",
     "express": "^4.16.2",
     "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-mocha": "^4.3.1",
     "gulp-nodemon": "^2.2.1",
     "mongoose": "^4.13.3",
+    "should": "^13.1.3",
+    "sinon": "^4.1.2",
+    "supertest": "^3.0.0",
     "xo": "^0.18.2"
   }
 }
